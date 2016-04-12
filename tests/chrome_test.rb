@@ -1,4 +1,4 @@
-# filename: grid.rb
+# filename: chrome_test.rb
 
 require 'selenium-webdriver'
 require 'rspec/expectations'
@@ -8,7 +8,7 @@ def setup
   @driver = Selenium::WebDriver.for(
     :remote,
     url: 'http://localhost:14444/wd/hub',
-    desired_capabilities: :chrome) # you can also use :chrome, :safari, etc.
+    desired_capabilities: :chrome) # you can also use :firefox, :safari, etc.
 end
 
 def teardown

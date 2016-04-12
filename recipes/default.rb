@@ -5,6 +5,12 @@
 # Author: Drew Holt <drew@liatrio.com>
 #
 
+package 'ruby'
+package 'ruby-devel'
+
+gem_package 'selenium-webdriver'
+gem_package 'rspec'
+
 include_recipe 'selenium'
 include_recipe 'selenium_grid::hub'
 include_recipe 'selenium_grid::node'
