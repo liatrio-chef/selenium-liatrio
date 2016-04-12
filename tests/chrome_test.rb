@@ -23,5 +23,6 @@ end
 
 run do
   @driver.get 'http://www.google.com'
+  @driver.save_screenshot('screenshot.png')
   expect(@driver.title).to eq('Google')
 end
