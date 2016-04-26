@@ -1,6 +1,9 @@
 selenium-liatrio Cookbook
 ========================
-This is a wrapper cookbook that installs selenium.
+This is a wrapper cookbook that installs selenium with a linux chrome and firefox webdrivers. 
+
+* The main use is for jenkins-liatrio job testing.
+* Example rspec chrome and firefox tests exist in /home/vagrant/chrome.rb and firefox.rb which are intended to be used with liatrio/hygieia-dev-unbaked with the spring-petclinic example.
 
 Requirements
 ------------
