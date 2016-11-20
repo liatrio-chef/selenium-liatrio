@@ -41,7 +41,6 @@ template '/home/vagrant/chrome_test.rb' do
   owner 'vagrant'
   group 'vagrant'
   mode '0644'
-  variables ({})
 end
 
 template '/home/vagrant/firefox_test.rb' do
@@ -49,5 +48,4 @@ template '/home/vagrant/firefox_test.rb' do
   owner 'vagrant'
   group 'vagrant'
   mode '0644'
-  variables ({})
 end
