@@ -7,6 +7,7 @@
 
 package 'ruby'
 package 'ruby-devel'
+package 'gcc'
 
 gem_package 'selenium-webdriver'
 gem_package 'rspec'
