@@ -12,6 +12,9 @@ package 'gcc'
 gem_package 'selenium-webdriver'
 gem_package 'rspec'
 
+include_recipe 'java'
+node.default['java']['version'] = 8
+
 include_recipe 'selenium'
 include_recipe 'selenium_grid::hub'
 include_recipe 'selenium_grid::node'

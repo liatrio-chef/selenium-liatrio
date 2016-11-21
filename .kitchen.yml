@@ -9,7 +9,6 @@ platforms:
 suites:
   - name: default
     run_list:
-      - recipe[java]
       - recipe[selenium-liatrio::default]
     attributes:
       java:

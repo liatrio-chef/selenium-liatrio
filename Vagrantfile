@@ -2,7 +2,7 @@
 # vi: set ft=ruby :
 
 Vagrant.configure(2) do |config|
-  config.vm.box = 'liatrio/centos7chefjava'
+  config.vm.box = 'bento/centos-7.2'
 
   config.berkshelf.enabled = true
   config.vm.provision 'chef_solo' do |chef|
