@@ -1,7 +1,8 @@
 ---
 driver:
   name: docker
-  use_sudo: false
+  use_sudo: true
+  run_command: yum install initscripts
 
 platforms:
   - name: centos-7.2
