@@ -8,7 +8,9 @@ platforms:
 
 driver_config:
   require_chef_omnibus: 12.16.42
-  provision_command: 'yum install initscripts'
+  provision_command: 'yum install initscripts -y'
+  privileged: true 
+
  
 
 suites:
