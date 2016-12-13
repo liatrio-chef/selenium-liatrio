@@ -9,6 +9,10 @@ Vagrant.configure(2) do |config|
     chef.add_recipe 'selenium-liatrio::default'
     chef.add_recipe 'minitest-handler'
     chef.json = {
+      'java' => {
+        'jdk_version' => '8',
+        'install_flavor' => 'openjdk'
+      }
     }
   end
 
@@ -19,6 +23,8 @@ Vagrant.configure(2) do |config|
 
   config.vm.provider :virtualbox do |v|
     v.customize ['modifyvm', :id, '--natdnshostresolver1', 'on']
+    v.customize ['modifyvm', :id, '--cableconnected1', 'on']
+    v.customize ['modifyvm', :id, '--cableconnected2', 'on']
   end
 
   #  config.vm.provision "shell", inline: "firewall-cmd --permanent --add-port=4444/tcp && firewall-cmd --reload"

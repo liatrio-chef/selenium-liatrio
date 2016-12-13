@@ -41,14 +41,14 @@ node.set['selenium']['node']['capabilities'] = [
 include_recipe 'selenium::node'
 
 template '/home/vagrant/chrome_test.rb' do
-  source 'home/vagrant/chrome_test.rb'
+  source 'chrome_test.rb'
   owner 'vagrant'
   group 'vagrant'
   mode '0644'
 end
 
 template '/home/vagrant/firefox_test.rb' do
-  source 'home/vagrant/firefox_test.rb'
+  source 'firefox_test.rb'
   owner 'vagrant'
   group 'vagrant'
   mode '0644'
