@@ -7,9 +7,13 @@
 
 package 'ruby'
 package 'ruby-devel'
+package 'gcc'
 
 gem_package 'selenium-webdriver'
 gem_package 'rspec'
+
+include_recipe 'java'
+node.default['java']['version'] = 8
 
 include_recipe 'selenium'
 include_recipe 'selenium_grid::hub'
@@ -41,7 +45,6 @@ template '/home/vagrant/chrome_test.rb' do
   owner 'vagrant'
   group 'vagrant'
   mode '0644'
-  variables ({})
 end
 
 template '/home/vagrant/firefox_test.rb' do
@@ -49,5 +52,4 @@ template '/home/vagrant/firefox_test.rb' do
   owner 'vagrant'
   group 'vagrant'
   mode '0644'
-  variables ({})
 end
