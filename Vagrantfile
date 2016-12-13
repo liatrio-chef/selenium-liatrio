@@ -7,11 +7,15 @@ Vagrant.configure(2) do |config|
   config.berkshelf.enabled = true
   config.vm.provision 'chef_solo' do |chef|
     chef.add_recipe 'selenium-liatrio::default'
-    chef.add_recipe 'minitest-handler'
     chef.json = {
       'java' => {
         'jdk_version' => '8',
         'install_flavor' => 'openjdk'
+      },
+      'selenium_liatrio' => {
+        'user' => 'vagrant',
+        'group' => 'vagrant',
+        'home' => '/home/vagrant'
       }
     }
   end

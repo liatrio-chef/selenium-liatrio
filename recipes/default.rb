@@ -49,7 +49,7 @@ end
 
 template "#{node['selenium_liatrio']['home']}/firefox_test.rb" do
   source 'firefox_test.rb'
-  owner 'vagrant'
-  group 'vagrant'
+  owner node['selenium_liatrio']['user']
+  group node['selenium_liatrio']['group']
   mode '0644'
 end
