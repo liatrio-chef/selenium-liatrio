@@ -8,7 +8,8 @@ def setup
   @driver = Selenium::WebDriver.for(
     :remote,
     url: 'http://localhost:14444/wd/hub',
-    desired_capabilities: :chrome) # you can also use :firefox, :safari, etc.
+    desired_capabilities: :chrome
+  ) # you can also use :firefox, :safari, etc.
 end
 
 def teardown

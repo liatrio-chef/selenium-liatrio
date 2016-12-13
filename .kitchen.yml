@@ -19,3 +19,7 @@ suites:
     attributes:
       java:
         jdk_version: "8"
+      selenium_liatrio:
+        user: "kitchen"
+        group: "kitchen"
+        home: "/home/kitchen"

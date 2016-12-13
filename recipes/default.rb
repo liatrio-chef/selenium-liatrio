@@ -40,14 +40,14 @@ node.set['selenium']['node']['capabilities'] = [
 
 include_recipe 'selenium::node'
 
-template '/home/vagrant/chrome_test.rb' do
+template "#{node['selenium_liatrio']['home']}/chrome_test.rb" do
   source 'chrome_test.rb'
-  owner 'vagrant'
-  group 'vagrant'
+  owner node['selenium_liatrio']['user']
+  group node['selenium_liatrio']['group']
   mode '0644'
 end
 
-template '/home/vagrant/firefox_test.rb' do
+template "#{node['selenium_liatrio']['home']}/firefox_test.rb" do
   source 'firefox_test.rb'
   owner 'vagrant'
   group 'vagrant'
