@@ -22,14 +22,15 @@ include_recipe 'selenium_grid::node'
 include_recipe 'chrome'
 include_recipe 'chromedriver'
 package 'firefox'
+package 'google-chrome'
 
 node.set['selenium']['node']['capabilities'] = [
-  {
-    browserName: 'chrome',
-    maxInstances: 1,
-    version: chrome_version,
-    seleniumProtocol: 'WebDriver'
-  },
+  # {
+  #   browserName: 'chrome',
+  #   maxInstances: 1,
+  #   version: chrome_version,
+  #   seleniumProtocol: 'WebDriver'
+  # },
   {
     browserName: 'firefox',
     maxInstances: 1,
